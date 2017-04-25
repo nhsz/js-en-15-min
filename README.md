@@ -2,8 +2,11 @@
 
 ## Variables
 
-Sirven para guardar valores, ponerles nombre y reutilizarlos. Pueden empezar con cualquier letra, `$` ó `_`.
-Distingue entre mayúsculas y minúsculas. Por convención se utiliza `camelCase`.
+Sirven para guardar valores, ponerles nombre y reutilizarlos.  
+
+- Pueden empezar con cualquier letra, `$` ó `_` (no con números).
+- Distingue entre mayúsculas y minúsculas.  
+- Por convención se utiliza `camelCase`.
 
 Así se **declara** una variable:
 
