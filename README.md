@@ -8,11 +8,11 @@ Sirven para guardar valores, ponerles nombre y reutilizarlos.
 - Distingue entre mayúsculas y minúsculas.  
 - Por convención se utiliza `camelCase`.
 
-Así se **declara** una variable:
+### Declarar una variable
 
 > `var nombre;`  
 
-Así se **inicializa** una variable:
+### Inicializar una variable
 
 > `var nombre = 'freeCodeCamp';`
 
