@@ -20,7 +20,7 @@ Sirven para guardar valores, ponerles nombre y reutilizarlos.
 
 > `console.log(nombre)`
 
-## Tipos de dato
+## Tipos de datos
 
 ### String
 
@@ -51,14 +51,14 @@ Números enteros y de punto flotante.
 
 #### Concatenar
 
-> `var nombre = 'Ada'` 
-> `var apellido = 'IT'` 
-> `var nombreCompleto` 
+> `var nombre = 'Ada';`  
+> `var apellido = 'IT';`  
+> `var nombreCompleto = nombre + ' ' + apellido;` 
 
 #### Subcadena
 
-> `nombre.substring(inicio, fin - 1)` 
-> `var nombreRecortado = nombre.substring(inicio, fin - 1)` 
+> `nombre.substring(inicio, fin - 1);` 
+> `var nombreRecortado = nombre.substring(inicio, fin - 1);` 
 
 ## Otros tipos de datos 
 
@@ -70,7 +70,14 @@ Números enteros y de punto flotante.
 ## Estructuras de datos
 
 ### Arrays
+
+> `nombre.substring(inicio, fin - 1);`  
+
 ### Objetos
+
+> `var unArreglo = [];`  
+
+
 
 ## ES6/2015
 
