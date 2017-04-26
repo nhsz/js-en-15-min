@@ -1,35 +1,5 @@
 # js en 10 minutos
 
-## Variables
-
-Sirven para guardar valores, ponerles nombre y reutilizarlos.  
-
-- Pueden empezar con cualquier letra, `$` ó `_` (no con números).
-- Distingue entre mayúsculas y minúsculas.  
-- Por convención se utiliza `camelCase`.
-
-### Declarar una variable
-
-> `var nombre;`  
-
-### Inicializar una variable
-
-> `var nombre = 'freeCodeCamp';`
-
-## Imprimir texto en la consola
-
-> `console.log(nombre)`
-
-## Tipos de datos
-
-### String
-
-Lo usamos para guardar cadenas de caracteres (texto). Se escriben entre comillas simples o dobles, sin mezclar.
-
-### Number
-
-Números enteros y de punto flotante.
-
 ### Boolean
 
 ## Operaciones
