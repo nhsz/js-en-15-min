@@ -151,7 +151,7 @@
 
         <section>
           <h2>Number</h2>
-          <p><strong class=keyword>Números enteros ó de punto flotante.</strong></p>
+          <p><strong class=keyword>Números enteros ó de punto flotante</strong>.</p>
 
           <pre><code class="js">
           var unEntero = 27;
@@ -332,8 +332,8 @@
 
           <p>Último elemento: [longitud del arreglo - 1]</p>
           <pre><code class="js">
-          var ultimoElemento = unArregloDeNumeros.length - 1;
-          unArregloDeNumeros[ultimoElemento];  // 3
+          var ultimaPosicion = unArregloDeNumeros.length - 1;
+          unArregloDeNumeros[ultimaPosicion];  // 3
           </code></pre>
 
           <p class="fragment fade-left"><strong class=keyword>Nota:</strong> los índices de los arrays empiezan en 0.</p>
@@ -343,15 +343,15 @@
           <h3>Modificar un array</h3>
           <p>Reasignar valores</p>
           <pre><code class="js">
-          unArregloDeNumeros[1] = 7.5  // [1, 7.5, 3];
+          unArregloDeNumeros[1] = 7.5;  // [1, 7.5, 3];
           </code></pre>
           <p>Agregar al final</p>
           <pre><code class="js">
-          unArregloDeNumeros.push('Ada')  // [1, 7.5, 3, 'Ada'];
+          unArregloDeNumeros.push('Ada');  // [1, 7.5, 3, 'Ada'];
           </code></pre>
           <p>Sacar el último elemento</p>
           <pre><code class="js">
-          unArregloDeNumeros.pop()  // 'Ada';
+          unArregloDeNumeros.pop();  // 'Ada';
           </code></pre>
         </section>
 
@@ -382,7 +382,7 @@
         <section>
           <p>Podemos redefinir los atributos</p>
           <pre><code class="js">
-          unLibro.titulo = 'Como JavaScript para chocolate'
+          unLibro.titulo = 'Como JavaScript para chocolate';
           </code></pre>
 
           <p>Y crear atributos nuevos</p>
@@ -392,7 +392,7 @@
         </section>
 
         <section>
-          <p><strong class=keyword>Pro tip</strong>: mostrar objetos en la consola con <code>console.table</code></p>
+          <p><strong class=keyword>Tip</strong>: mostrar objetos en la consola con <code>console.table</code></p>
           <pre><code class="js">
           console.table(unObjeto);
           </code></pre>
@@ -415,7 +415,7 @@
 
           <pre><code class="js">
           if (nombre === 'Ada') {
-            console.log('Hola' + ' ' + nombre + '!')
+            console.log('Hola' + ' ' + nombre + '!');
           }
           </code></pre>
         </section>
@@ -508,7 +508,7 @@
           <h3>Las funciones <strong class=keyword>no siempre reciben parámetros</strong>.</h3>
           <pre><code class="js">
           function saludo() {
-            console.log('Hola Mundo!')
+            console.log('Hola Mundo!');
           }
           </code></pre>
         </section>
@@ -524,7 +524,9 @@
 
         <section>
           <h1>Para leer más!</h1>
+
           <p><a href="https://jsparagatos.com/"><strong class=keyword>JavaScript Para Gatos</strong></a></p>
+          
           <p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript"><strong class=keyword>A re-introduction to JavaScript</strong></a></p>
         </section>
 
