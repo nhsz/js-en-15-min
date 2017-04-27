@@ -1,0 +1,628 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+
+    <title>JS en 10 minutos</title>
+
+    <meta name="description" content="JS en 10 minutos">
+    <meta name="author" content="Nicolás Quiroz">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/jstheme.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/tomorrow-night.min.css">
+
+    <!-- Font used -->
+    <link href="https://fonts.googleapis.com/css?family=Reem+Kufi" rel="stylesheet">
+	</head>
+	<body>
+		<div class="reveal">
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>JS en 10'</h1>
+					<p style="font-size: 0.7em">Nicolás Quiroz / <a href="https://twitter.com/_nhsz">@_nhsz</a></p>
+				</section>
+
+        <section>
+          <h1>JavaScript</h1>
+          <p>Lenguaje de programación creado en 1995 por <strong class=keyword>Brendan Eich</strong>, para darle dinamismo e interacción a los sitios web.</p>
+          <p class="fragment fade-left"><strong>Hoy es un lenguaje de propósito general.</strong></p>
+				</section>
+
+        <section>
+          <h2>¿Por qué JavaScript?</h2>
+          <p>Es el lenguaje de programación que entienden y ejecutan los navegadores (browsers).</p>
+          <p class="fragment fade-left">Desde hace algunos años, podemos ejecutar código JavaScript fuera del browser, con <strong>NodeJS</strong>.</p>
+				</section>
+
+        <section>
+          <h1>Variables</h1>
+					<p><strong class=keyword>Espacios con nombre para guardar valores</strong>.</p>
+          <p class="fragment fade-left">Son <strong class=keyword>reutilizables</strong> y se pueden reasignar.</p>
+				</section>
+
+        <section>
+          <h2>Declarar una variable</h2>
+
+          <pre><code class="js">
+          var nombre;
+          </code></pre>
+
+          <p class="fragment fade-left">Cada <strong class=keyword>sentencia</strong> termina con <code>;</code></p>
+				</section>
+
+        <section>
+          <h2>Inicializar una variable</h2>
+
+          <pre><code class="js">
+          var nombre = 'Ada';
+          </code></pre>
+				</section>
+
+        <section>
+          <h2>Reasignar una variable</h2>
+
+          <pre><code class="js">
+          var nombre = 'Ada';
+          nombre = 'Grace';
+          </code></pre>
+				</section>
+
+        <section>
+          <h2>Cómo nombrar variables</h2>
+          <ul>
+            <li>Usar nombres significativos, que representen el contenido</li>
+            <li class="fragment fade-left">El nombre puede empezar con cualquier letra, <code>$</code> ó <code>_</code></li>
+            <li class="fragment fade-left">Hay distinción entre mayúsculas y minúsculas (case sensitive)</li>
+            <li class="fragment fade-left">Por convención se utiliza <code>camelCase</code></li>
+          </ul>
+        </section>
+
+        <section>
+          <h1>Constantes</h1>
+					<p>Espacios con nombre para guardar <strong class=keyword>valores que no varían</strong>.</p>
+          <p>Son <strong class=keyword>reutilizables</strong>, pero <strong class=keyword>no se pueden reasignar</strong>.</p>
+
+          <pre class="fragment fade-left"><code class="js">
+          Math.PI // 3.141592653589793;
+          </code></pre>
+
+          <pre class="fragment fade-left"><code class="js">
+          const nombre = 'Ada';
+          nombre = 'Celeste'; // TypeError
+          </code></pre>
+				</section>
+
+        <section>
+          <h2>Imprimir texto en la consola</h2>
+
+          <pre><code class="js">
+          console.log(nombre);
+          </code></pre>
+				</section>
+
+        <section>
+          <h1>Tipos de datos</h1>
+          <ul>
+            <li><code>String</code></li>
+            <li><code>Number</code></li>
+            <li><code>Boolean</code></li>
+          </ul>
+				</section>
+
+        <section>
+          <h2>String</h2>
+          <p><strong class=keyword>Cadenas de caracteres</strong> (texto).</p>
+          <p>Se escriben entre comillas simples ó dobles, sin mezclar.</p>
+
+          <pre class="fragment fade-left"><code class="js">
+          'JavaScript' ✔
+          "JavaScript" ✔
+          'JavaScript" ✗
+          </code></pre>
+				</section>
+
+        <section>
+          <h2>Operaciones con Strings</h2>
+          <h3>Longitud</h3>
+
+          <pre><code class="js">
+          nombre.length;
+          'Ada'.length;  // 3
+          </code></pre>
+
+          <h3>Concatenación</h3>
+          <p>Se usa para unir diferentes cadenas de caracteres.</p>
+
+          <pre><code class="js">
+          var nombre = 'Ada';
+          var apellido = 'IT';
+          var nombreCompleto = nombre + ' ' + apellido;
+          </code></pre>
+				</section>
+
+        <section>
+          <h3>Subcadena</h3>
+          <p>Retorna una nueva cadena, formada por los caracteres indicados entre los índices.</p>
+
+          <pre><code class="js">
+          var nombreRecortado = nombreCompleto.substring(0, 3);
+          </code></pre>
+
+          <p class="fragment fade-left"><strong class=keyword>Nota:</strong> los índices empiezan en 0 y al de fin hay que sumarle 1.</p>
+        </section>
+
+        <section>
+          <h2>Number</h2>
+          <p><strong class=keyword>Números enteros ó de punto flotante.</strong></p>
+
+          <pre><code class="js">
+          var unEntero = 27;
+          </code></pre>
+
+          <pre><code class="js">
+          var unNumeroDePuntoFlotante = 2.5;
+          </code></pre>
+				</section>
+
+        <section>
+          <h2>Operaciones con Number</h2>
+          <h3>Suma: <code>x + y</code></h3>
+
+          <pre><code class="js">
+          1 + 1  // 2
+          1 + Math.PI  // 4.141592653589793
+          </code></pre>
+
+          <h3>Resta: <code>x - y</code></h3>
+
+          <pre><code class="js">
+          27 - 4  // 23
+          3 - 5  // -2
+          3 - 1.5  // 1.5
+          </code></pre>
+				</section>
+
+        <section>
+          <h3>Multiplicación: <code>x * y</code></h3>
+
+          <pre><code class="js">
+          7 * 3  // 21
+          4 * 12.5  // 50
+          </code></pre>
+
+          <h3>División: <code>x / y</code></h3>
+
+          <pre><code class="js">
+          1 / 2  // 0.5
+          8 / 2  // 4
+          1.0 / 3.0  // 0.3333333333333333
+          </code></pre>
+        </section>
+
+        <section>
+          <h3>Incremento</h3>
+          <p>Se puede escribir de diferentes formas.</p>
+          <p></p><code>x = x + 1, x += 1, ++x, x++</code></p>
+          <pre><code class="js">
+          var x = 5;
+          x += 1;  // 6;
+          </code></pre>
+          <h3>Decremento</h3>
+          <code>x = x - 1, x -= 1, --x, x--</code>
+          <pre><code class="js">
+          var x = 5;
+          x -= 1;  // 4;
+          </code></pre>
+        </section>
+
+        <section>
+          <h3>Módulo: <code>x % y</code></h3>
+          <p>Es el <strong class=keyword>resto de dividir x por y</strong>.</p>
+          <pre><code class="js">
+          10 % 2  // 0
+          11 % 2  // 1
+          x % 2 === 0  // siempre que x sea par
+          y % 2 === 1  // siempre que y sea impar
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>Boolean</h2>
+          <p>Tiene 2 valores posibles: <strong class=keyword>true</strong> y <strong class=keyword>false</strong>, para indicar si algo es verdadero o falso.</p>
+          <pre><code class="js">
+          2 > 1  // true
+          1 > 2  // false
+          'hola' === 'Hola'  // false
+          </code></pre>
+          <p class="fragment fade-left"><strong class=keyword>Nota:</strong> al comparar valores, usar siempre <code>===</code></p>
+				</section>
+
+        <section>
+          <h1>Otros tipos de datos</h1>
+          <p>Hay 2 tipos de datos especiales que también se usan frecuentemente en JavaScript: <strong class=keyword>null</strong> y <strong class=keyword>undefined</strong>.</p>
+				</section>
+
+        <section>
+          <h2>Null</h2>
+          <p>Indica explícitamente que la variable <strong class=keyword>no tiene valor</strong>.</p>
+          <pre><code class="js">
+          var sinValor = null;
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>Undefined</h2>
+          <p>Indica que la variable <strong class=keyword>no tiene valor definido</strong>, o bien porque le fue asignado o bien porque sólo fue declarada.</p>
+          <pre><code class="js">
+          var conValorIndefinido = undefined;
+          </code></pre>
+
+          <pre><code class="js">
+          var variableSoloDeclarada;  // undefined
+          </code></pre>
+        </section>
+
+        <section>
+          <h1>Comentarios</h1>
+          <h2>1 sola línea</h2>
+          <pre><code class="js">
+          // Hola!
+          </code></pre>
+          <h2>Multilínea</h2>
+          <pre><code class="js">
+          /*
+            esto es una introducción
+            muy rápida a JavaScript
+          */
+          </code></pre>
+				</section>
+
+        <section>
+          <h1>Comparar valores</h1>
+          <h2>Igualdad</h2>
+          <pre><code class="js">
+          1 == 1  // true
+          1 == '1'  // true
+          </code></pre>
+
+          <h2>Igualdad estricta</h2>
+          <pre><code class="js">
+          1 === 1  // true
+          1 === '1'  // false
+          </code></pre>
+				</section>
+
+        <section>
+          <h2>Desigualdad</h2>
+          <pre><code class="js">
+          'js' != 'js'  // false
+          </code></pre>
+
+          <h2>Desigualdad estricta</h2>
+          <pre><code class="js">
+          1 !== '1'  // true
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>Otras comparaciones</h2>
+          <code><, >, <=, >=</code>
+        </section>
+
+        <section>
+          <h2>Arrays</h2>
+          <p>Un array es una <strong class=keyword>lista ordenada de valores de cualquier tipo</strong>. Puede modificarse.</p>
+          <pre><code class="js">
+          var unArregloVacio = [];
+          </code></pre>
+
+          <pre class="fragment fade-left"><code class="js">
+          var unArregloDeNumeros = [1, 2, 3];
+          </code></pre>
+
+          <pre class="fragment fade-left"><code class="js">
+          var unArregloDeCosas = [3.7, 2, 'JavaScript', [48, 7]];
+          </code></pre>
+				</section>
+
+        <section>
+          <h3>Otra forma de crear arrays</h3>
+          <pre><code class="js">
+          var otroArregloVacio = new Array();
+          </code></pre>
+
+          <pre class="fragment fade-left"><code class="js">
+          // definimos el tamaño y luego asignamos los valores
+          var otroArregloDeNumeros = new Array(3);
+          </code></pre>
+
+          <pre class="fragment fade-left"><code class="js">
+          var otroArregloDeNumeros = new Array(4, 5, 6);
+          </code></pre>
+        </section>
+
+        <section>
+          <h3>Para acceder a un elemento usamos <strong class=keyword>índices</strong>.</h3>
+          <p>Primer elemento: [0]</p>
+          <pre><code class="js">
+          unArregloDeNumeros[0];  // 1
+          </code></pre>
+
+          <p>Último elemento: [longitud del arreglo - 1]</p>
+          <pre><code class="js">
+          var ultimoElemento = unArregloDeNumeros.length - 1;
+          unArregloDeNumeros[ultimoElemento];  // 3
+          </code></pre>
+
+          <p class="fragment fade-left"><strong class=keyword>Nota:</strong> los índices de los arrays empiezan en 0.</p>
+        </section>
+
+        <section>
+          <h3>Modificar un array</h3>
+          <p>Reasignar valores</p>
+          <pre><code class="js">
+          unArregloDeNumeros[1] = 7.5  // [1, 7.5, 3];
+          </code></pre>
+          <p>Agregar al final</p>
+          <pre><code class="js">
+          unArregloDeNumeros.push('Ada')  // [1, 7.5, 3, 'Ada'];
+          </code></pre>
+          <p>Sacar el último elemento</p>
+          <pre><code class="js">
+          unArregloDeNumeros.pop()  // 'Ada';
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>Objetos</h2>
+          <p><strong class=keyword>Son colecciones no ordenadas de pares clave-valor</strong>.</p>
+          <p>Contienen <strong class=keyword>propiedades</strong>, que pueden ser valores de cualquier tipo, arrays, funciones o incluso otros objetos.</p>
+  			</section>
+
+        <section>
+          <p>Creando un objeto</p>
+          <pre><code class="js">
+          var unLibro = {
+            titulo: 'Como agua para chocolate',
+            autor: 'Laura Esquivel',
+            paginas: 256
+          };
+          </code></pre>
+
+          <p>Podemos acceder a los atributos por el nombre</p>
+          <pre><code class="js">
+          unLibro.titulo;  // 'Como agua para chocolate'
+          unLibro.autor;  // 'Laura Esquivel'
+          unLibro.paginas;  // 256
+          </code></pre>
+        </section>
+
+        <section>
+          <p>Podemos redefinir los atributos</p>
+          <pre><code class="js">
+          unLibro.titulo = 'Como JavaScript para chocolate'
+          </code></pre>
+
+          <p>Y crear atributos nuevos</p>
+          <pre><code class="js">
+          unLibro.anio = 1989;
+          </code></pre>
+        </section>
+
+        <section>
+          <p><strong class=keyword>Pro tip</strong>: mostrar objetos en la consola con <code>console.table</code></p>
+          <pre><code class="js">
+          console.table(unObjeto);
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>Condicionales</h2>
+          <p><strong class=keyword>Nos permiten decidir qué camino seguir</strong>, según las condiciones que evaluemos.</p>
+          <p>Las <strong class=keyword>condiciones</strong> son <strong class=keyword>booleanas</strong>: cualquier expresión que pueda evaluarse como <strong class=keyword>true</strong> o <strong class=keyword>false</strong>.</p>
+				</section>
+
+        <section>
+          <h3>If</h3>
+          <p>El código del condicional <strong class=keyword>se ejecuta sólo si la condición se cumple</strong> (es decir, es verdadera).</p>
+          <pre><code class="js">
+          if (condición booleana) {
+            // ejecuto este código
+          }
+          </code></pre>
+
+          <pre><code class="js">
+          if (nombre === 'Ada') {
+            console.log('Hola' + ' ' + 'Ada' + '!')
+          }
+          </code></pre>
+        </section>
+
+        <section>
+          <h3>If/Else</h3>
+          <p>El código del condicional se ejecuta sólo si la condición se cumple, <strong class=keyword>sino tomamos el otro camino</strong>.</p>
+          <pre><code class="js">
+          if (condición booleana) {
+            // ejecuto este código
+          } else {
+            // ejecuto este otro código
+          }
+          </code></pre>
+
+          <pre><code class="js">
+          if (1 > 2) {
+            console.log('1 es mayor que 2');
+          } else {
+            console.log('2 es mayor que 1');
+          }
+          </code></pre>
+        </section>
+
+        <section>
+          <h3>Condicionales anidados</h3>
+          <p><strong class=keyword>Están adentro de otros condicionales</strong> y que <strong class=keyword>sólo se evaluan si los anteriores son verdaderos</strong>.</p>
+          <pre><code class="js">
+          if (primer condición) {
+            if (segunda condición) {
+              // etc
+            }
+          }
+          </code></pre>
+
+          <pre><code class="js">
+          if (primer condición) {
+            if (segunda condición) {
+              // etc
+            }
+          } else if (tercer condición) {
+            // etc
+          }
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>Ciclos</h2>
+          <p>Nos permiten <strong class=keyword>iterar sobre diferentes colecciones de valores</strong>, como arreglos u objetos.</p>
+				</section>
+
+        <section>
+          <h3>For</h3>
+          <p>El ciclo <strong class=keyword>se ejecuta la cantidad de veces indicada</strong>. Lo usamos cuando conocemos esta cantidad.</p>
+          <pre><code class="js">
+          for (var i = 0; i < 5; i++) {
+            console.log('Iteración N° ' + i);
+          }
+          </code></pre>
+				</section>
+
+        <section>
+          <h3>While</h3>
+          <p>Se ejecuta <strong class=keyword>mientras la condición booleana sea verdadera</strong>.</p>
+          <pre><code class="js">
+          var i = 0;
+
+          while (i < 5) {
+            console.log('Iteración N° ' + i);
+            i++;
+          }
+          </code></pre>
+				</section>
+
+        <section>
+          <h3>Do... While</h3>
+          <p><strong class=keyword>Se ejecuta siempre al menos una vez</strong>, independientemente de que la condición booleana sea o no verdadera.</p>
+          <pre><code class="js">
+          var i = 0;
+
+          do {
+            console.log('Iteración N° ' + i);
+            i++;
+          } while (i < 5);
+          </code></pre>
+				</section>
+
+        <section>
+          <h2>Funciones</h2>
+          <p>Son <strong class=keyword>bloques de código</strong> con nombre, <strong class=keyword>reutilizables</strong>.</p>
+          <p>Pueden recibir (o no) <strong class=keyword>parámetros</strong>.</p>
+          <pre><code class="js">
+          // devuelve la suma entre a y b
+          function sumarDosValores(a, b) {
+            return a + b;
+          }
+          </code></pre>
+				</section>
+
+        <section>
+          <h3>Las funciones <strong class=keyword>no siempre retornan un valor</strong>.</h3>
+
+          <pre><code class="js">
+          // le asigna 0 al segundo elemento del array
+          function elSegundoSiempreEsCero(unArreglo) {
+            unArreglo[1] = 0;
+          }
+          </code></pre>
+        </section>
+
+        <section>
+          <h3>Las funciones <strong class=keyword>no siempre reciben parámetros</strong>.</h3>
+          <pre><code class="js">
+          function saludo() {
+            console.log('Hola Mundo!')
+          }
+          </code></pre>
+        </section>
+
+        <section>
+          <h3>Para ejecutar una función (invocarla) escribimos su <strong class=keyword>nombre y los parámetros que recibe</strong>.</h3>
+          <pre><code class="js">
+          saludo()  // 'Hola Mundo!'
+          </code></pre>
+
+          <p class="fragment fade-left"><strong class=keyword>Nota:</strong> si no recibe parámetros, igual escribimos los <code>()</code>.</p>
+        </section>
+
+        <section>
+          <h1>Scope</h1>
+          <p>Define el <strong class=keyword>alcance o ámbito</strong> donde 'vive' y desde dónde puede ser accedida y modificada la variable.</p>
+        </section>
+
+        <section>
+          <h2><code>var</code></h2>
+          <p>La variable vive dentro de la función.</p>
+        </section>
+
+        <section>
+          <h2><code>let</code> y <code>const</code></h2>
+          <p>Viven dentro de un bloque determinado.</p>
+          <p><code>let</code> se usa para variables y <code>const</code> para constantes.</p>
+          <br>
+          <p class="fragment fade-left"><strong class=keyword>Cuidado</strong>: si no usamos ninguna de estas <code>keywords</code> para declarar variables, el <strong class=keyword>scope</strong> va a ser <strong class=keyword>global</strong>!</p>
+        </section>
+
+        <section>
+          <h1>Para leer más!</h1>
+          <p><a href="https://jsparagatos.com/"><strong class=keyword>JavaScript Para Gatos</strong></a></p>
+          <p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript"><strong class=keyword>A re-introduction to JavaScript</strong></a></p>
+        </section>
+
+        <section>
+          <h1>Fin</h1>
+        </section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>
