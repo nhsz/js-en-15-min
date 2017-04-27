@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 
-    <title>JS en 10 minutos</title>
+    <title>JS en 15 minutos</title>
 
     <meta name="description" content="JS en 10 minutos">
     <meta name="author" content="Nicolás Quiroz">
@@ -27,7 +27,7 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h1>JS en 10'</h1>
+					<h1>JS en 15'</h1>
 					<p style="font-size: 0.7em">Nicolás Quiroz / <a href="https://twitter.com/_nhsz">@_nhsz</a></p>
 				</section>
 
@@ -96,8 +96,8 @@
           </code></pre>
 
           <pre class="fragment fade-left"><code class="js">
-          const nombre = 'Ada';
-          nombre = 'Celeste'; // TypeError
+          const otroNombre = 'Estefanía';
+          otroNombre = 'Celeste'; // TypeError
           </code></pre>
 				</section>
 
@@ -148,17 +148,6 @@
           var nombreCompleto = nombre + ' ' + apellido;
           </code></pre>
 				</section>
-
-        <section>
-          <h3>Subcadena</h3>
-          <p>Retorna una nueva cadena, formada por los caracteres indicados entre los índices.</p>
-
-          <pre><code class="js">
-          var nombreRecortado = nombreCompleto.substring(0, 3);
-          </code></pre>
-
-          <p class="fragment fade-left"><strong class=keyword>Nota:</strong> los índices empiezan en 0 y al de fin hay que sumarle 1.</p>
-        </section>
 
         <section>
           <h2>Number</h2>
@@ -320,7 +309,7 @@
 
         <section>
           <h2>Arrays</h2>
-          <p>Un array es una <strong class=keyword>lista ordenada de valores de cualquier tipo</strong>. Puede modificarse.</p>
+          <p>Un array es una <strong class=keyword>colección ordenada de valores de cualquier tipo</strong>. Puede modificarse.</p>
           <pre><code class="js">
           var unArregloVacio = [];
           </code></pre>
@@ -333,22 +322,6 @@
           var unArregloDeCosas = [3.7, 2, 'JavaScript', [48, 7]];
           </code></pre>
 				</section>
-
-        <section>
-          <h3>Otra forma de crear arrays</h3>
-          <pre><code class="js">
-          var otroArregloVacio = new Array();
-          </code></pre>
-
-          <pre class="fragment fade-left"><code class="js">
-          // definimos el tamaño y luego asignamos los valores
-          var otroArregloDeNumeros = new Array(3);
-          </code></pre>
-
-          <pre class="fragment fade-left"><code class="js">
-          var otroArregloDeNumeros = new Array(4, 5, 6);
-          </code></pre>
-        </section>
 
         <section>
           <h3>Para acceder a un elemento usamos <strong class=keyword>índices</strong>.</h3>
@@ -442,7 +415,7 @@
 
           <pre><code class="js">
           if (nombre === 'Ada') {
-            console.log('Hola' + ' ' + 'Ada' + '!')
+            console.log('Hola' + ' ' + nombre + '!')
           }
           </code></pre>
         </section>
@@ -463,28 +436,6 @@
             console.log('1 es mayor que 2');
           } else {
             console.log('2 es mayor que 1');
-          }
-          </code></pre>
-        </section>
-
-        <section>
-          <h3>Condicionales anidados</h3>
-          <p><strong class=keyword>Están adentro de otros condicionales</strong> y que <strong class=keyword>sólo se evaluan si los anteriores son verdaderos</strong>.</p>
-          <pre><code class="js">
-          if (primer condición) {
-            if (segunda condición) {
-              // etc
-            }
-          }
-          </code></pre>
-
-          <pre><code class="js">
-          if (primer condición) {
-            if (segunda condición) {
-              // etc
-            }
-          } else if (tercer condición) {
-            // etc
           }
           </code></pre>
         </section>
@@ -569,24 +520,6 @@
           </code></pre>
 
           <p class="fragment fade-left"><strong class=keyword>Nota:</strong> si no recibe parámetros, igual escribimos los <code>()</code>.</p>
-        </section>
-
-        <section>
-          <h1>Scope</h1>
-          <p>Define el <strong class=keyword>alcance o ámbito</strong> donde 'vive' y desde dónde puede ser accedida y modificada la variable.</p>
-        </section>
-
-        <section>
-          <h2><code>var</code></h2>
-          <p>La variable vive dentro de la función.</p>
-        </section>
-
-        <section>
-          <h2><code>let</code> y <code>const</code></h2>
-          <p>Viven dentro de un bloque determinado.</p>
-          <p><code>let</code> se usa para variables y <code>const</code> para constantes.</p>
-          <br>
-          <p class="fragment fade-left"><strong class=keyword>Cuidado</strong>: si no usamos ninguna de estas <code>keywords</code> para declarar variables, el <strong class=keyword>scope</strong> va a ser <strong class=keyword>global</strong>!</p>
         </section>
 
         <section>
