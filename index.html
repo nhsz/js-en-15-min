@@ -119,6 +119,10 @@
 				</section>
 
         <section>
+          <p>JavaScript tiene <strong class=keyword>tipado dinámico</strong> y <strong class=keyword>débil</strong>: las variables se declaran sin un tipo, pueden modificarse, compararse y operar sin necesidad de ser convertidas previamente.</p>
+        </section>
+
+        <section>
           <h2>String</h2>
           <p><strong class=keyword>Cadenas de caracteres</strong> (texto).</p>
           <p>Se escriben entre comillas simples ó dobles, sin mezclar.</p>
@@ -523,10 +527,32 @@
         </section>
 
         <section>
+          <h2>Scope</h2>
+          <p>Es el <strong class=keyword>ámbito o alcance de una variable</strong>, donde esta 'vive' y desde donde puede ser accedida y modificada.</p>
+        </section>
+
+        <section>
+          <h3><code>var</code></h3>
+          <p>El scope está ligado a una función.</p>
+
+          <h3><code>let</code></h3>
+          <p>Tiene alcance dentro de un bloque de código, que forma parte de alguna función.</p>
+
+          <h3><code>const</code></h3>
+          <p>Al igual que <code>let</code>, tiene alcanca dentro de un bloque de código, pero no es variable sino constante (no puede reasignarse).</p>
+        </section>
+
+        <section>
+          <p><strong class=keyword>Cuidado:</strong> en JavaScript podemos declarar variables sin usar <code>var</code>, <code>let</code> o <code>const</code>, ¡pero el scope pasa a ser global!</p>
+          <br>
+          <p>Esto significa que la variable puede ser accedida y modificada desde cualquier parte de nuestro código.</p>
+        </section>
+
+        <section>
           <h1>Para leer más!</h1>
 
           <p><a href="https://jsparagatos.com/"><strong class=keyword>JavaScript Para Gatos</strong></a></p>
-          
+
           <p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript"><strong class=keyword>A re-introduction to JavaScript</strong></a></p>
         </section>
 
