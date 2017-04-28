@@ -1,1 +1,1 @@
-# js en 15 minutos
+# JS en 15'
